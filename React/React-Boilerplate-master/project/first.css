@@ -1,0 +1,36 @@
+#canvas{
+    border: 1px solid black;
+}
+#first{
+    float:left;
+}
+#second{
+    float:left;
+}
+#third{
+    float:left;
+}
+#cbutton{
+    float:left;
+}
+#reset{
+    float:right;
+}
+#available{
+    list-style: none;
+}
+#applied{
+    list-style: none;
+}
+#rotate{
+    margin:10px;
+}
+#scale{
+    margin:10px;
+}
+#translate{
+    margin:10px;
+}
+#opacity{
+    margin:10px;
+}

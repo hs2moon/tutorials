@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HS's Website</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body> 
+	<p name="baconsub">omgwtfbbq?</p>
+	<p name="mybacon">hi my name is spunky</p>
+	<p name="omgbacontuna">string cheese more bacon</p>
+</body>
+</html>

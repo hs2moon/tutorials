@@ -1,0 +1,122 @@
+HTML
+Three Doctypes
+Strict - <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+Transitional - <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+Frameset - <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+// no one use Frameset??
+
+
+
+
+<strong></strong> - bold
+<em></em> - italic
+<br /> - line breaker
+<h1></h1> - header, size decreases as number increases e.g 2->3 - smaller size
+<!-- text --> - comment
+<a></a> - link, a stands for anchor
+<a href="destination"> - destination could be http://~~ or filename if all htmls in same folder
+
+target destination - linking within the page
+<a name="anyname"></a>
+Then at the top of the page
+<a href="#anyname"><a>
+
+EMAIL LINK - NOPE !! <a href="mailto:yma4g4@gmail.com">email!</a>
+
+TOOLTIP - <a title="Description"></a>
+
+<img src="" /> - adding image
+
+<a href="http:~~"><img src="filename.jpg" /></a> - linking a page to a picture
+
+<img height="150"/> - resize the image - but not preferred way since it does not make your website load quicker
+
+TABLE - 2 rows and 3 columns
+<table border="integer - that represent the border size?">
+<tr>
+<td> TEXT </td>
+<td> TEXT </td>
+<td> TEXT </td>
+</tr>
+<tr>
+<td> TEXT </td>
+<td> TEXT </td>
+<td> TEXT </td>
+</tr>
+</table>
+
+<th></th> - table header(used like <td>)
+<td or th colspan="int"></td or th>
+
+Table width - table has an attribute which is width 
+<table width="% or int"></table>
+<table cellspacing="int"></table> - put space among cells
+<table cellpadding="int"></table> - adding pads around the text
+
+
+LISTS 
+unorderd list <ul></ul>
+list item <li></li>
+
+ordered list <ol></ol>
+
+*************Forms 
+
+text input, name = id?, size=the view of the textbox, maxlength=limiting the text length,
+value="default text that have already placed in the box"
+<form>
+	Username: <input type:"text" 
+					name="username" 
+					size="30" 
+					maxlength="20"
+					value="ENTER USERNAME"/>
+</form>	
+
+Check BOXES and RADIO BUTTONS just like java
+checkboxes allows multiple selections
+radiobutton allows only one selection
+<form>
+	Male: <input type="radio" name="sex" value="male" />
+	Female: <input type="radio" name="sex" value="female"/>
+	
+	<p>select the foods that you would like to order!</p>
+	Bacon <input type="checkbox" name="food" value="bacon"/>
+	Ham	<input type="checkbox" name="food" value="ham"/>
+	Tuna <input type="checkbox" name="food" value="tuna"/>
+	Soda Pop <input type="checkbox" name="food" value="soda pop"/>
+</form>
+
+Drop Down Lists - all the values should be unique
+	<select name="activities">
+		<option value="play"> play the guitar </option>
+		<option value="your"> comb your hair </option>
+		<option value="someelses"> comb elses hair </option>
+		<option value="opossum"> teach a opossum </option>
+		<option value="shave"> shave </option>
+	</select>
+	
+TEXTAREA - big text field, takes more than a single line text
+			rows = height cols= width
+<textarea name="bio" rows="8" cols="40">
+ Here becomes the text
+</textarea>
+
+PASSWORDS and UPLOAD - behaves just like text field above, but showing bullets on the textfield
+<form>
+	Password: <input type="password" name="pword"/>
+	<p>Now submit a file</p>
+	
+	<input type="file" name="qwert"/>
+</form>
+
+SUBMITTING FORMS - SUBMIT BUTTON
+<form action="dosomething" method="post">
+	Username: <input type="text" name="username" />
+	<br/>
+	Password: <input type="password" name="pword" /> 
+	<br/>
+	
+	<input type="submit" value="Submit!"/>
+</form>

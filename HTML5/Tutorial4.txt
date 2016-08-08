@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HS's Website</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body> 
+	<header>
+		<h1>Welcome to Hsouse!</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li>Home</li>
+			<li>League of Legends</li>
+			<li>Stardew Valley</li>
+		<ul>
+	</nav>
+	
+	<section>
+		<article>
+			<header>
+				<hgroup>
+					<h1>Title of Article</h2>
+					<h2>subtitle for Article!</h2>
+				</hgroup>
+			</header>
+			<p>this is the best article in the world!</p>
+			<footer>
+				<p>- wrtten by HS Moon, July 28th 2016</p>
+			</footer>
+		</article>
+		
+				<article>
+			<header>
+				<hgroup>
+					<h1>Title of Article 2</h2>
+					<h2>subtitle for Article!</h2>
+				</hgroup>
+			</header>
+			<p>this is the second best article in the world!</p>
+			<footer>
+				<p>- wrtten by HS Moon, July 28th 2016</p>
+			</footer>
+		</article>
+	</section>
+	
+	<aside>
+		<h4>News</h4>
+		HS got a new dog!
+	</aside>
+	
+	<footer>
+		Copyright HS 1991
+	</footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HS's Website</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body> 
+	<div id="mommy">
+		<p class="sally">tuna and bacon d'oh!</p>
+		<p class="bucky">tuna and bacon d'oh!</p>
+		<p class="sally">tuna and bacon d'oh!</p>
+		<p class="bucky">tuna and bacon d'oh!</p>
+		<p class="bucky">tuna and bacon d'oh!</p>
+	</div>
+</body>
+</html>
+
+
+main.css
+* {color:blue;}
+:not(.bucky){color:red;}

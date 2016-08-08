@@ -1,0 +1,46 @@
+JAVASCRIPT
+
+All of javascript command should be in between script brackets
+
+<body>
+<script type="text/javascript">
+
+</script>
+</body>
+
+COMMENTS - same as java, // or /* 
+
+VARIABLE - var x = 12; variable is case-sensitive, only works with letters, numbers or underscore
+			however, it can't start with number so start with letters or underscore
+			
+DIFFERENT TYPES OF VARIABLE
+STRING
+If I have to include another quotaion marks "" then use \ as escape character
+any character after \ would be recognized as string
+BOOLEAN - true or false
+NULL - empty
+
+VARIABLE with Strings - just + sign to add variable to string ""
+
+FUNCTIONS - example below
+<body> 
+<script type="text/javascript">
+	function funky (){
+		alert("Ouch!!!!");
+	}
+</script>
+<form>
+<input type ="button" value="touch me" onclick="funky()"/>
+</form>
+</body>
+
+FUNCTIONS parameters
+	function apples (one, two){
+		document.write(one + " is better than " + two + "<br/>");
+	}
+	
+	apples("me", "you");
+	apples("counting crows", "horse");
+	apples("strawberry", "green fruits");
+	
+GLOBAL and LOCAL variables

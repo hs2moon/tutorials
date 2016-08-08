@@ -1,0 +1,37 @@
+body{
+	text-align:center;
+}
+header,section,footer,aside,nav,article,hgroup{
+	display:block; /*for make sure, we have to assign all the elements as block*/
+}
+#skin{
+	width:700px;
+	margin:10px auto;
+	padding:5px;
+	background:red;
+	border:4px solid black;
+	border-radius:10px;
+}
+nav{
+	margin:5px 0px;
+}
+#buttons{
+	float:left; /*it will appear the left hand side of the player*/
+	width:70px;
+	height:22px;
+}
+#defaultBar{
+	position:relative;
+	float:left; /*it will appear right next to play button*/
+	width:600px;  /* default bar + button width should not exceed the width of the skin which is 700px*/
+	height: 16px;
+	padding:4px;
+	border:2px solid black;
+	background:yellow;
+}
+#progressBar{
+	position:absolute; /*absolute */
+	width:0px; /*it start at 0px and will be programmed to move along the movie*/
+	height:16px; /*the height is same as defaultBar however, the padding in defaultBar makes this bar inside in it*/
+	background:blue;
+}

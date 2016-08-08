@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyun </title>
+    <link rel="stylesheet" href="first.css">
+    <script src="first.js"></script>
+</head>
+<body>
+    <div id="first">
+        <section id="main">
+            <canvas id="canvas" width="600" height="400">
+
+            </canvas>
+        </section>
+
+        <div id="cbutton">
+        Choose your own image file <br/>
+        <input  type="file" id="imageLoader" name="imageLoader" size="20" >
+        </div>
+
+        <div id="reset">
+            <input type="button" value="Reset">
+        </div>
+
+    </div>
+    <div id="second">
+        <ul id="available">
+            Available List
+            <li id="rotate"><input type="button" onclick="drawRotated(45)" value="Rotate"></li>
+            <li id="translate"><input type="button" value="Translate"></li>
+            <li id="opacity"><input type="button" value="Opacity"></li>
+            <li id="scale"><input type="button" value="Scale"></li>
+        </ul>
+    </div>
+    <div id="third">
+        <ul id="applied">
+            Applied List
+            <li id="rotate"><input type="button"  value="Rotate"></li>
+            <li id="translate"><input type="button" value="Translate"></li>
+            <li id="opacity"><input type="button" value="Opacity"></li>
+            <li id="scale"><input type="button" value="Scale"></li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+CSS
+<style type="text/class"></style> this should be in your head (No Exception)
+
+Then in between style bracket, designate the section you wanna change 
+eg.
+<head>  
+<style type="text/class">
+	p {	font-family:arial;
+		color:orange;
+	}
+</style>
+</head>
+
+For Color {color:colorname_red or :#RGB_value}
+
+Line Spacing - p{line-height:200%;}
+
+New School font change
+o {font-weight:bold;} - bold font
+o {font-style:italic;} - font italic
+
+Text align - o {text-align:left, center or right;}
+
+Indent - o {text-indent:25px;}
+
+To change background color or whole font color in body
+	body {background-color:blue; - background color
+			color:white; - font color}
+			
+Putting image as background:
+body{
+			background-image:url(filename.jpg);
+			background-repeat:repeat-y; or repeat-x; or no-repeat;
+			background-position:10px 60px;
+			background-position: per%(x) per%(y);
+		}
+		
+CSSBOX-PADDING 
+		h2 {background-color:yellow;
+			padding-top:~px;
+			padding-bottom:~px;
+			padding-right:
+			padding-left:
+			padding  <- all 4 sides
+			
+			}
+			
+CSSBOX-BORDER   ***** you need all three components for border
+		 h2{border-color:red;
+			border-width:3px;
+			border-style:solid;}
+			
+			border-top,bottom,left,right-color:;
+			border-t/b/l/r-style:;
+			border-t/b/l/r-width:;
+			
+CSSBOX-MARGIN
+		 p {background-color:orange;
+		 margin: 10px
+		 margin-t/b/l/r: 40px
+		 }
+
+Width and Height also border shortcut
+	<style type="text/css">
+		h4 {background-color:red;
+			color: white;
+			width: 350px;
+			height:100px;
+			border: 3px solid black
+		}
+		
+STYLING LINKS
+	<style type="text/css">
+		a:link{color:red;
+			text-decoration:none;}
+			
+		a:visited{color:green;}
+
+		a:hover{background-color:blue;
+				color:white;
+				text-decoration:underline;
+				font-weight:bold;}
+		a:active{background-color:orange;}
+	</style>
+	
+STYLING TABLES
+	<style type="text/css">
+		table {border:3px solid blue;}
+		tr {background-color:yellow;}
+		td {border: 2px dashed red;}
+	</style>
+	
+STYLING UNORDERED LIST
+	<style type="text/css">
+		ul {list-style-type: circle,square,katakana}
+		ul {list-style-image:url(check.png);}
+			<style type="text/css">
+		ul {border: 1px solid red;
+			list-style-type:none;
+			padding:1%;
+		}
+
+STYLING more than one ELEMENTS & SPAN
+		h1, p {color:red;}
+
+		//span, you have to add around the part with span
+<style type="text/css">
+		span {font-weight:bold;
+			color:blue;}
+	</style>
+	
+DIV
+	<style type="text/css">
+		div {	border:2px solid red;
+				position:absolute;
+				width:150px;
+				top:40px;
+				left:35px;
+			}
+	</style>
+	
+Styling Using CLASSES
+	<style type="text/css">
+		.redtext {color:red;}
+		.bluetext {color:blue;}
+	</style>
+</head>
+<body> 
+<p class="redtext">i want this text to be red!</p>
+<p class="bluetext">and this text should be BLUE!</p>
+
+DIV ID
+	<style type="text/css">
+		#job 	{border:2px solid red;
+				position: absolute;
+				top:15px;
+				left:25px;}
+		#realjob {border:2px solid orange;
+				position: absolute;
+				top:65px;
+				left:5px;}
+	</style>
+</head>
+<body> 
+<div id="job">I want a job!</div>
+<div id="realjob">I really want a fancy job!</div>
+
+CHILD SELECTORS
+</title>
+	<style type="text/css">
+		p > a {color:red;
+				font-size:30px;
+				}
+	</style>
+</head>
+<body> 
+	<a href="http://google.com"> first </a>
+	<p>	<a href="http://www.facebook.com"> second </a></p>
+	<h3> <a href="http://google.com"> third </a></h3>
+	
+PSEUDO ELEMENTS
+first-letter, first-line, before, after
+	<style type="text/css">
+		p:first-letter {font-weight:bold;
+						font-size:30px;
+						color:green;}
+	</style>
+	
+EXTERNAL STYLE SHEET
+Create a CSS file with styles such as following:
+h1 {color:green;}
+
+p {font-family:Tahoma;
+	color:red;
+	font-size:20px;}
+	
+a {color:orange;}
+
+Then place the css file in the same folder you work on
+add following between head section:	
+<link rel="stylesheet" type="text/css" href="donkey.css"/> 
+
+OVERRIDING STYLES
+	<link rel="stylesheet" type="text/css" href="donkey.css"/> 
+	
+	<style type = "text/css">
+		h1 {color:green;}
+	</style>	
+The browswer would read the most recent command!
+
+ABSOLUTE POSITIONING
+{position: absolute;} - this allows us to put any item on exactly where we want them to be
+however, it does not care whether those items are overlapped or something
+It position from the absolute origin, and comes with such problem overlapping
+
+RELATIVE POSITIONING
+{position: relative;} - this allows to put the item on the specified distance from relative origin which means where i would have to be
+and comes with problem like gap where the item has been pulled out
+
+FIXED POSITIONING
+{position: fixed;} - works same as absolute positioning, but it remains at the fixed coordinate we put even with the scrolling down the page
+It comes down also as scrolling down, and stays the fixed position on the webpage
+
+MAX WIDTHS AND HEIGHT - it restricts images(which primarily use this method) in a maximum size
+	<style type="text/css">
+		img {max-height: 200px;
+			max-width: 200px;}
+	</style>
+	
+

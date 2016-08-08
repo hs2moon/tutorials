@@ -1,0 +1,263 @@
+TEMPLATE - HTML5
+
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Website</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+</body>
+</html>
+
+Whenever you have more than one headers inside your header group them in hgroup
+
+Atrribute Selector
+ p.tuna{colr:blue;}
+ p[name]{color:blue;}
+ p[name="bucky"]{color:blue;}
+ 
+ p[name^="bacon"]{color:blue;} - ^ means any value beginning with bacon
+ p[name$="bacon"]{color:blue;} - $ means any value ends with bacon
+ p[name*="bacon"]{color:blue;} - * as long as the value contains bacon
+ 
+PSEUDO-Classes
+ p:nth-child(odd){color:green;}
+ p:nth-child(even){color:red;}
+ p:nth-child(4n){color:blue;}
+ 
+NEGATION PSEUDO CLASS - exclude something from CSS styling
+ * {color:blue}; - turn everything blue, it does not matter if it is p, div or anything
+ :not(.bucky){color:red;} - every value that is not bucky turns into red
+ 
+ SWEET NEW CSS3 Selectors
+div > p {color:green;} - any paragraph that has div parent will turn into green
+p.bucky + p{color:blue;} -(should must share the same parents) any paragraph that immediately followed by bucky class will turn into blue;
+p.bucky ~ p{color:blue;} -(sharing the same parents) any paragraph that followed by bucky will turn into the color;
+
+REVERSE THE BOX ORDER- put in the parents styling
+	-webkit-box-direction:reverse;
+	
+FLEXIBLE BOX TRICKS
+	-webkit-box-pack:center; - puts childeren in the center, or start or end;
+
+CUSTOMIZED ORDER OF BOX inside
+	-webkit-box-ordinal-group: 1~4 since we have 4 box then the order will be as like as number order
+
+FLEXIBLE BOX - 0(fixed) or 1(flexible);	
+	-webkit-box-flex: 0; or 1;
+
+VERTICALLY ALIGN
+	-webkit-box-align:center; or start; or end;
+	-webkit-box-align:stretch; it stretches!!!!!!!!!!
+	
+ROUNDED CORNER
+	-webkit-border-radius:10px; higher number more rounded
+
+SHADOW(boxes only) - color, offset to the right, offset to the bottom, amount of gradient blur, shadows inside the box; 
+	-webkit-box-shadow:rgb(110,110,110) 8px 8px 8px inset; 
+
+SHADOW(TEXT) - same as above
+	text-shadow:rgb(130,130,130) 3px 3px 5px;
+
+GRADIENTS (get rid of background color then add following) (where to start(top bottom or 12deg), color1, color2)
+LINEAR -> background:-webkit-linear-gradient(top,black,white);
+		(where to start the gradient, the shape of gradient, where to start the color, where to start the color)
+RADIAL -> background:-webkit-radial-gradient(center, circle,red 0%,orange 50%);
+		rgba(r,g,b, alpha less it goes, lighter the shadow)
+ALPHA -> -webkit-box-shadow:rgba(150,150,150, .6) 8px 8px 8px;
+
+OUTLINE-> outline:7px solid red; <- another line outside border
+
+TRANSFORMATION 
+-webkit-transform:scale(1.5); - (1.5times greater)default 1 so lessthan 1 smaller, greater than 1 larger
+-webkit-transform:scale(1,3); - (x-axis:default, y:stetches 3times)
+-webkit-transform:scale(-1,1); - (the text becomes reverse) 
+
+-webkit-transform:rotate(45deg);
+
+-webkit-transform:skew(deg); - not goood
+
+-webkit-transform:translate(150px,300px); -moves something (+(right),+(down))
+ALL AT ONCE!
+-webkit-transform:rotate(40deg) tranlate(100px,100px) scale(0.8);
+
+HOVER OVER
+#box:hover{
+	-webkit-transform:rotate(45deg);
+}
+
+ANIMATING WITH TRANSITIONS
+-webkit-transition: -webkit-transform 2s; (what to make animation and for how long)
+
+MULTIPLE transitions
+	-webkit-transition:-webkit-transform 2s, opacity 2s, background 2s, width 2s, height 2s;
+}
+#box:hover{
+	-webkit-transform:rotate(360deg);
+	opacity: 1;
+	background: #1ec7e6;
+	width:450px;
+	height:110px;
+}
+
+JAVASCRIPT - don't need type since html5 the default script type is javascript
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="js.js"></script>
+</head>
+
+querySelector - it only can return one single element
+ function getStuff(){
+	document.querySelectorAll('#tuna').onclick=talk; - look through the document and return the first elment that id is tuna
+//in between '', we can put not only id but also class like '.something'
+querySelectorAll - return every element contains id tuna
+function getStuff(){
+	var list = document.querySelectorAll('#tuna');
+	for(var i=0;i<list.length;i++){
+		list[i].onclick=talk;
+	}
+}
+
+Playing video on your website
+	<video src="video.mp4"  width="640" height="320" poster="angry.png" autoplay loop controls></video> (commonly don't put autoplay and poster together)
+
+CUSTOMIZING VIDEO PLAYER(SKIN)
+	REFERS to jstutorial.html, hyunsik.css, hyunsik.jss
+
+CANVAS
+
+<body>
+	<section id="main">
+		<canvas id="canvas" width="600" height="400">
+			
+		</canvas>
+	</section>
+</body>
+
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+	canvas.fillStyle="blue";
+	canvas.strokeStyle="blue";
+	canvas.strokeRect(10,10,100,100);
+	canvas.fillRect(10,120,100,100);  /*starting point, and how big; strokeRect: line, fillRect: solid*/
+	canvas.clearRect(20,130,45,65);  /*like an eraser, take the chunks out of it, take*/
+}
+window.addEventListener('load', doFirst, false);
+
+GRADIENTS
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+	var g = canvas.createLinearGradient(0,0,100,100); /*(x start value,y start value, x end value,y end value)*/
+	g.addColorStop(.0,"blue");
+	g.addColorStop(.5,"green");
+	g.addColorStop(1,"red");
+	canvas.fillStyle=g;
+	canvas.fillRect(0,0,100,100);
+}
+window.addEventListener('load', doFirst, false);
+
+CUSTOM SHAPES
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+	
+	canvas.beginPath();
+	canvas.moveTo(50,50); /*start poiint*/
+	canvas.lineTo(70,250);
+	canvas.lineTo(300,200);
+	canvas.closePath();
+	canvas.stroke();	/**/
+}
+window.addEventListener('load', doFirst, false);
+
+TEXT and SHADOWS
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+	
+	canvas.shadowOffsetX = 4;   /*proeprty assigns with = sign, while function needs parameters*/
+	canvas.shadowOffsetY = 4;
+	canvas.shadowBlur = 6;  /*higher value, blurrer*/
+	canvas.shadowColor = 'rgba(0,0,255,0.5)'; /*red green blue transparency(1 is opic)*/
+	
+	canvas.font="bold 36px Tahoma";
+	canvas.textAlign="end";
+	canvas.fillText("omgwtfbbq?", 300, 100);
+}
+window.addEventListener("load", doFirst, false);
+
+TRANSFORMATIONS
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+	
+	canvas.font="bold 22px Tahoma";
+	canvas.textAlign="start";
+	canvas.fillText("start", 10,30);  /*10 to the right, 30 to the bottom*/
+	
+	canvas.translate(100,150);  /*moves the canvas 100px right, 150px down*/
+	canvas.fillText("after translate",0,0);
+	
+	canvas.rotate(1);  /*radian value 360deg = 2*pi*/
+	canvas.fillText("after rotate",0,0);
+	
+	canvas.scale(1.5,4); /*(xvalue, yvalue)*/
+	canvas.fillText("after scale",0,20);
+}
+window.addEventListener("load", doFirst, false);
+
+SAVING and RESTORING CANVAS
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+	canvas.font="bold 22px Tahoma";
+	canvas.textAlign="start";
+	
+	canvas.save();
+	canvas.fillText("let's begin!",10,30);
+	
+	canvas.rotate(1);
+	canvas.fillText("after rotation",60,10);
+	
+	canvas.restore();
+	canvas.fillText("after restoring!",10,30);
+}
+window.addEventListener("load", doFirst, false);
+
+IMAGES ON CANVAS
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+
+	var pic = new Image();
+	pic.src="angry.png";
+	pic.addEventListener("load", function(){canvas.drawImage(pic,0,0,x.width,x.height)}, false);
+}
+window.addEventListener("load", doFirst, false);
+
+ANIMATION
+function doFirst(){
+	var x = document.getElementById('canvas');
+	canvas = x.getContext('2d');
+
+	window.addEventListener("mousemove", bucky, false);
+}
+function bucky(e){
+	canvas.clearRect(0,0,600,400);
+	var xPos = e.clientX;
+	var yPos = e.clientY;
+	canvas.fillRect(xPos-50,yPos-50,100,100); /*half a size of shape, then mouse would be in the center of the shape*/
+} 
+window.addEventListener("load", doFirst, false);
+
+DRAG AND DROP
+REFER TO DRAGANDDROP FILES
+
+WEB STORAGE API

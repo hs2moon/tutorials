@@ -1,0 +1,87 @@
+Java
+
+&&: and, ||:or !:not
+
+for loop: for(initial; endpoint; increment)
+
+interest: 		for(int day=1; day<=20; day++){
+			amount=principal*Math.pow(1+rate, day);
+			
+do while: 	do{
+				System.out.println(counter);
+				counter++;
+			}while(condition);
+			
+Math Class: pow(a,b) , abs(), ceil(roundup), floor(), max(a,b), min(a,b),  
+
+random # generator: import java.util.Random;
+
+					public class randomgenerator {
+						public static void main(String[] args){
+							Random box = new Random();
+							int number;
+		
+						for(int counter = 1; counter <= 10; counter++ ){
+							number = 1+box.nextInt(6);
+								System.out.println(number + "!!");
+							}
+						}
+					}
+
+Arrays: variable that only stores values of same data type
+		int,char,double variable_name[] <- this makes the array
+		INDEX!! - from 0 to 9 
+		int hyunsik[]= new int[how many data you want to put from index 0]
+		hyunsik[0(index)]=123;
+		OR 
+		int hyunsik[]={1,2,3,4,5,6};
+		
+		Sum : 		int hs[]={21,16,86,21,3};
+					int sum=0;
+		
+					for(int counter=0; counter<hs.length; counter++){
+						sum+=hs[counter];
+					}
+
+Event Handling:		import java.awt.FlowLayout;
+					import java.awt.event.ActionListener;
+					import java.awt.event.ActionEvent;
+					import javax.swing.JFrame;
+					import javax.swing.JTextField;
+					import javax.swing.JPasswordField;
+					import javax.swing.JOptionPane;			
+		
+LinkedList -> if you add the item in the middle or the beginning of the list
+				****LinkedList consists of elements where each elementt 
+					has a reference to the previous and next element
+					
+ArrayList -> if you want to put the tiem in the end of the list
+				It manages arrays internally
+
+MAP				
+HashMap<K,V> - the list may or may not be in order
+LinkedHashMap - stores the data in the order that I put the items
+TreeMap - stores the data in the natural order like (1-2-3-4-5-6)	
+
+SET
+HashSet - do not allow you to have duplicated item in the set, does not retain order
+LinkedHashSet - 	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
